@@ -30,7 +30,8 @@ app = make_app()
 
 @app.route('/')
 def hello_world():
-    return qapi.testmodel()
+    return render_template('index.html')
+    #return qapi.testmodel()
     # tested how to write functions in models lol
     # but I'm not sure whether it is the right way
     #return a
