@@ -13,8 +13,8 @@ from models.registration import *
 import json
 from sqlalchemy import update
 
-import sys
-sys.path.insert(0, '/Users/jixiang/Documents/ISS/SEProject/www/DocHeroku2/controller')
+# import sys
+# sys.path.insert(0, '/Users/jixiang/Documents/ISS/SEProject/www/DocHeroku2/controller')
 
 
 
