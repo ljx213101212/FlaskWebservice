@@ -1,5 +1,5 @@
 DEBUG = True
 TESTING= True
 
-DATABASE = 'ljx2:root@173.194.109.213:3306/helloGoogle'
+DATABASE = 'ljx2:root@173.194.109.213:3306/res'
 DATABASEURI = 'mysql+mysqldb://' + DATABASE
