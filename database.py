@@ -62,7 +62,6 @@ class Clinic(Base):
     id = Column(Integer, primary_key=True,autoincrement=True)
     name = Column(String(128))
     aviva_code =  Column(String(32))
-    zone =  Column(String(64))
     estate =  Column(String(64))
     address_1 =  Column(String(256))
     address_2 =  Column(String(256))
@@ -73,11 +72,11 @@ class Clinic(Base):
     longtitude = Column(String(256))
     # for operating hours I just stored them as strings
     # you guys figure it out
-    weekday =  Column(String(256))
-    saturday =  Column(String(256))
-    sunday =  Column(String(256))
-    public_holiday = Column(String(256))
-    remarks =  Column(String(256))
+    # weekday =  Column(String(256))
+    # saturday =  Column(String(256))
+    # sunday =  Column(String(256))
+    # public_holiday = Column(String(256))
+    # remarks =  Column(String(256))
     # foreign keys
     # this one here is for querying patients of a hospital
     
@@ -86,25 +85,24 @@ class Clinic(Base):
 
 
     def __init__(self,name="None", aviva_code="None",\
-                 zone="None", estate="None",address_1="None",address_2="None",\
-                 postal="None",telephone="None",fax="None",weekday="None",\
-                 saturday="None",sunday="None",public_holiday="None",remarks="None",\
+                 estate="None",address_1="None",address_2="None",\
+                 postal="None",telephone="None",fax="None",\
                  latitude = "None", longitude="None"):
 
         self.name = name
         self.aviva_code = aviva_code
-        self.zone = zone
+        # self.zone = zone
         self.estate = estate
         self.address1 = address_1
         self.address2 = address_2
         self.postal = postal
         self.telephone = telephone
         self.fax = fax
-        self.weekday = weekday
-        self.saturday = saturday
-        self.sunday = sunday
-        self.public_holiday = public_holiday
-        self.remarks = remarks
+        # self.weekday = weekday
+        # self.saturday = saturday
+        # self.sunday = sunday
+        # self.public_holiday = public_holiday
+        # self.remarks = remarks
         self.latitude = latitude
         self.longtitude = longitude
         
