@@ -133,6 +133,10 @@ def createClinic():
         clinic.address_1 = data['address_1']
     if 'address_2' in data:
         clinic.address_2 = data['address_2']
+    if 'latitude' in data:
+        clinic.latitude = data['latitude']
+    if 'longtitude' in data:
+        clinic.longtitude = data['longtitude']
     print data
     print clinic
     session.add(clinic)
