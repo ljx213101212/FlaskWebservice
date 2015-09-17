@@ -2,11 +2,11 @@ __author__='jx'
 from geopy.distance import great_circle
 
 def isWithNKilometers(src_lat,src_lng,kilo,lat,lng):
-    newport_ri = (src_lat,src_lng)
-    cleveland_oh = (lat,lng)
+    src_destination = (float(src_lat),float(src_lng))
+    destination = (float(lat),float(lng))
     #print "&&&&&&&&&"
     #print kilo
-    distance = great_circle(newport_ri, cleveland_oh).kilometers
+    distance = great_circle(src_destination, destination).kilometers
     #print distance
     if distance >= float(kilo):
         return False
