@@ -201,14 +201,16 @@ class PatientDetail(Base):
 class Insurance(Base):
     __tablename__ = 'insurance'
     insurance_id = Column(Integer, primary_key=True)
-    insurance_type = Column(String(64))
-    patien_name =Column(String(10))
-    patien_id = Column(Integer, ForeignKey('patient.patient_id'))
+    insurance_name = Column(String(64))
+    img_url = Column(String(256))
+    clinic_id = Column(Integer, ForeignKey('clinic.id'))
 
-    def __init__(self, insurance_id, insurance_type=None, patient_name=None):
+    def __init__(self, insurance_id, insurance_name=None, img_url=None,clinic_id=None):
         self.insurance_id = insurance_id
-        self.insurance_type = insurance_type
-        self.patien_name = patient_name
+        self.insurance_name = insurance_name
+        self.img_url = img_url
+        self.clinic_id = clinic_id
 
     def __repr__(self):
-        return '<Insurance of Patient %r>' % (self.patien_name)
+        return '<Insurance of Patient %r>' % (self.clinic_id)
+ 
