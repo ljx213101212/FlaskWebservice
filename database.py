@@ -157,7 +157,7 @@ class Patient(Base):
     patient_id = Column(Integer, primary_key=True)
     name = Column(String(64))
     detail = relationship('PatientDetail', backref='patient')
-    insurance = relationship('Insurance', backref='insurance')
+    #insurance = relationship('Insurance', backref='insurance')
     queue = relationship('Queue', backref='patient')
 
     def __init__(self,name=None):
